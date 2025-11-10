@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model MetricSample {
+  id        String   @id @default(cuid())
+  key       String
+  value     Float
+  labels    String?
+  createdAt DateTime @default(now())
+
+  @@index([createdAt])
+}
+
+
