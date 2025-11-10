@@ -1,0 +1,19 @@
+# Git
+.git
+.gitignore
+
+# Node
+**/node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Env and local DB
+**/.env
+server/prisma/dev.db
+
+# Local builds
+web/dist
+
+
